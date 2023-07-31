@@ -1,7 +1,5 @@
-import { useDeleteContactMutation } from 'redux/features/contactSlice/contactSlice';
 import './ContactList.scss';
 const ContactList = ({ contacts, deleteContact }) => {
-  const {} = useDeleteContactMutation();
   return (
     <div>
       <div className="contactsContainer">
