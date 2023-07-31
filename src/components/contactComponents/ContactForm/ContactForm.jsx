@@ -1,5 +1,6 @@
 import { useCreateContactMutation } from 'redux/features/contactSlice/contactSlice';
 import { useState } from 'react';
+import { toast } from 'react-toastify';
 import './ContactForm.scss';
 
 const ContactForm = () => {
@@ -7,14 +8,18 @@ const ContactForm = () => {
   const [phone, setPhone] = useState('');
   const [createContact] = useCreateContactMutation();
 
-  const formSubmit = evt => {
+  const formSubmit = async evt => {
     evt.preventDefault();
-    // console.log(evt.currentTarget.elements.name.value);
+    console.log('Submited sending.');
+    await createContact({ name, phone });
+    toast.success(`${name} added to contacts.`);
 
-    createContact({ name, phone });
     setName('');
     setPhone('');
   };
+
+  // console.log('isLoading: ', isLoading); // true якщо мутація запущена та очікується відповідь
+  // console.log('isSuccess: ', isSuccess); // true якщо остання мутація(обробка) має дані із успішного запиту
 
   return (
     <form id="form" className="contactForm form" onSubmit={formSubmit}>

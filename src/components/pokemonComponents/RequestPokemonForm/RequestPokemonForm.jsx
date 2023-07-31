@@ -5,6 +5,7 @@ const RequestPokemonForm = ({ submit }) => {
   const handleSubmitName = evt => {
     evt.preventDefault();
     submit(evt.currentTarget.elements.pokemonName.value);
+    evt.currentTarget.reset();
   };
   // --------------------------------------------------------
 
@@ -16,7 +17,7 @@ const RequestPokemonForm = ({ submit }) => {
             id="pokemonName"
             type="text"
             name="pokemonName"
-            placeholder="input pokemon name"
+            placeholder="input pokemon name or id"
           />
         </label>
 
