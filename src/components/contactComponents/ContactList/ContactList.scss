@@ -1,5 +1,4 @@
 .contactsContainer {
-    // border: 1px solid red;
     padding: 20px 25px 15px;
 }
 .contactsList {
@@ -20,19 +19,11 @@
 .container-content {
     display: flex;
     flex-grow: 1;
-    // align-items: center;
     gap: 60px;
-    // border: 1px solid rgb(110, 128, 63);
-    // justify-content: space-around;
+
     p {
         width: 250px;
         display: flex;
         justify-content: space-between;
-        // border: 1px solid rgb(110, 128, 63);
     }
-}
-.titleContent {}
-.content {}
-.button {
-    margin: 0;
 }

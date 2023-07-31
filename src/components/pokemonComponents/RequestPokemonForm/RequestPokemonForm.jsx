@@ -10,16 +10,19 @@ const RequestPokemonForm = ({ submit }) => {
 
   return (
     <>
-      <div>
-        <h2>Pokemon Page</h2>
-      </div>
-      <form onSubmit={handleSubmitName}>
-        <input
-          type="text"
-          name="pokemonName"
-          placeholder="input pokemon name"
-        />
-        <button type="submit">Search</button>
+      <form onSubmit={handleSubmitName} className="form">
+        <label className="label" htmlFor="pokemonName">
+          <input
+            id="pokemonName"
+            type="text"
+            name="pokemonName"
+            placeholder="input pokemon name"
+          />
+        </label>
+
+        <button type="submit" className="button">
+          Search
+        </button>
       </form>
     </>
   );

@@ -33,19 +33,17 @@ const ContactsPage = () => {
       <ContactForm />
       {isFetching && (
         <>
-          <h3>Loading....</h3>
-          <hr />
+          <h3 className="headers">Loading....</h3>
         </>
       )}
       {isError && (
         <div>
-          <h3>{error}</h3>
+          <h3 className="headers">{error}</h3>
         </div>
       )}
       {isLoading && (
         <>
-          <h3>Deleting....</h3>
-          <hr />
+          <h3 className="headers">Deleting....</h3>
         </>
       )}
 

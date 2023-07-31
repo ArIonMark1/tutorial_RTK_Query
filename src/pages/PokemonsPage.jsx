@@ -16,36 +16,31 @@ const PokemonPage = () => {
   // ****************************************************************
 
   return (
-    <>
-      <h1>Pokemon information Layout</h1>
-      <hr />
+    <div className="container">
+      <h1 className="headers">Pokemon information Layout</h1>
       <RequestPokemonForm submit={setPokemonName} />
       <div>
         <div>
-          <hr />
           {isFetching && (
             <>
-              <h3>Loading....</h3>
-              <hr />
+              <h3 className="headers">Loading....</h3>
             </>
           )}
           {isError && (
             <>
-              <h3>{error.data}</h3>
-              <hr />
+              <h3 className="headers">{error.data}</h3>
             </>
           )}
           {currentData && (
             <>
-              <h3>Success!</h3>
-              <hr />
+              <h3 className="headers">Success!</h3>
             </>
           )}
         </div>
 
         {isSuccess && <PokemonCard pokemonData={data} />}
       </div>
-    </>
+    </div>
   );
 };
 

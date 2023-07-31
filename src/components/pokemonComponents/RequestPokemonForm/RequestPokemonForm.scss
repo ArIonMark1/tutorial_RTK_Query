@@ -1,0 +1,26 @@
+.form {
+    position: relative;
+    padding: 20px 25px 15px;
+    border-bottom: 2px solid rgba(65, 105, 225, 0.3);
+
+    .label {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        padding-bottom: 16px;
+
+        input {
+            display: block;
+            font-size: 16px;
+            height: calc(2.25rem + 2px);
+            padding: 5px 12px;
+            margin-top: 5px;
+            color: #495057;
+            background-color: #fff;
+            background-clip: padding-box;
+            border: 1px solid #ced4da;
+            border-radius: 0.25rem;
+            transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+        }
+    }
+}
