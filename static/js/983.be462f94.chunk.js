@@ -1,2 +1,0 @@
-"use strict";(self.webpackChunktutorial_RTK_Query=self.webpackChunktutorial_RTK_Query||[]).push([[983],{983:function(e,t,n){n.r(t);var i=n(184),l={container:{minHeight:"calc(100vh - 250px)",display:"flex",alignItems:"center",justifyContent:"center"},title:{fontWeight:500,fontSize:44,textAlign:"center"}};t.default=function(){return(0,i.jsx)("div",{style:l.container,children:(0,i.jsx)("h2",{style:l.title,children:"Welcome to the site of all data sorts. Please enjoy to using all the features of the site."})})}}}]);
-//# sourceMappingURL=983.be462f94.chunk.js.map
