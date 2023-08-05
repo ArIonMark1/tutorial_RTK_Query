@@ -1,20 +1,27 @@
 import { useCreateContactMutation } from 'redux/features/contactSlice/contactSlice';
 import { useState } from 'react';
 import { toast } from 'react-toastify';
+import { PulseLoader } from 'react-spinners';
 import './ContactForm.scss';
 
 const ContactForm = () => {
   const [name, setName] = useState('');
   const [phone, setPhone] = useState('');
-  const [createContact] = useCreateContactMutation();
+  const [createContact, { isLoading }] = useCreateContactMutation();
 
   const formSubmit = async evt => {
     evt.preventDefault();
-    console.log('Submited sending.');
-    await createContact({ name, phone });
-    toast.success(`${name} added to contacts.`);
 
-    createContact({ name, phone });
+    const response = await createContact({ name, phone });
+    if (response.data) {
+      toast.success(`${name} added to contacts.`);
+    }
+    if (response.error) {
+      toast.error(
+        `Something went wrong... Additing contact ${name} was rejected.`
+      );
+    }
+
     setName('');
     setPhone('');
   };
@@ -56,7 +63,8 @@ const ContactForm = () => {
           required
         />
       </label>
-      <button className="button" type="submit">
+      <button className="button" type="submit" disabled={isLoading}>
+        {isLoading && <PulseLoader size={5} color="white" />}
         <span>Add contact</span>
       </button>
     </form>

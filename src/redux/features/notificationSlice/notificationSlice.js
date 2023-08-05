@@ -5,7 +5,7 @@ export const notificationsApi = createApi({
   baseQuery: fetchBaseQuery({
     baseUrl: 'https://64aadf5c0c6d844abedeef07.mockapi.io',
   }),
-  tagTypes: ['notifications'],
+  tagTypes: ['notifications'], // обовязково для всiх запитiв, тег-iмя(1шт.) колекцii доних
   endpoints: builder => ({
     //
     getNotifications: builder.query({
@@ -13,7 +13,7 @@ export const notificationsApi = createApi({
         url: '/notifications',
         method: 'GET',
       }),
-      providesTags: ['ALL'],
+      providesTags: ['notifications'],
     }),
     //
     createNotification: builder.mutation({

@@ -1,0 +1,44 @@
+.noteForm {
+
+        position: relative;
+        padding: 20px 25px 15px;
+        border-bottom: 2px solid rgba(65, 105, 225, 0.3);
+        padding: 20px 25px;
+        border-bottom: 2px solid rgba(65, 105, 225, 0.3);
+        .label {
+            display: flex;
+            padding-bottom: 10px;
+            input {
+                width: 100%;
+                font-size: 16px;
+                height: calc(2.25rem + 2px);
+                padding: 2px 12px;
+                color: #495057;
+                background-clip: padding-box;
+                border: 1px solid #ced4da;
+                border-radius: 0.25rem;
+            }
+        }
+   
+    .button {
+        padding: 10px 15px;
+    }
+}
+
+.contactDescribes {
+    display: flex;
+}
+
+.contactActions {
+    display: flex
+}
+
+.button:hover,
+.button:focus {
+    background-color: #303f9f;
+}
+
+.button:active {
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+}
+

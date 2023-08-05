@@ -1,4 +1,3 @@
-// import { getDefaultMiddleware } from '@reduxjs/toolkit';
 import { setupListeners } from '@reduxjs/toolkit/dist/query';
 import { apiSlice } from './features/apiSlice/apiSlice';
 import { contactApi } from './features/contactSlice/contactSlice';

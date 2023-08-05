@@ -1,22 +1,51 @@
+import { toast } from 'react-toastify';
+import { PulseLoader } from 'react-spinners';
 import { useDeleteNotificationMutation } from 'redux/features/notificationSlice/notificationSlice';
+import './NotificationMarkup.scss';
 
 const NotificationMarkup = ({ noteData }) => {
-  //   const [deleteObj, { isLoading }] = useDeleteNotificationMutation();
-  //   console.log(noteData); // {createdAt: '2023-08-01T03:11:57.456Z', note: 'note 15', id: '15'}
+  const [deleteNote, { isLoading }] = useDeleteNotificationMutation(); // tuple[function, option(info about mutation result )]
+
+  const deleteNotification = async () => {
+    let name = noteData.note;
+    // ----------------------------------------------------------------
+    const response = await deleteNote(noteData.id);
+    // ----------------------------------------------------------------
+    if (response.data) {
+      toast.success(`The notification ${name} successful deleted.`);
+    }
+    if (response.error) {
+      toast.error(
+        `Something went wrong... The notification ${name} could not be deleted.`
+      );
+    }
+    name = '';
+  };
+
   return (
     <>
-      <div>
-        {/* {isLoading && <p>{isLoading}</p>} */}
+      <li className="noteList__row">
+        <div className="container-content">
+          <p>
+            <span className="titleContent">Note: </span>
+            <span className="content"> {noteData.note}</span>
+          </p>
+          <p>
+            <span className="titleContent dataContent">Created: </span>
+            <span className="content dataContent"> {noteData.createdAt}</span>
+          </p>
+        </div>
 
-        <p>{noteData.note}</p>
-        <p>{noteData.createdAt}</p>
         <button
+          className="button"
           type="submit"
-          // onClick={deleteObj(noteData.id)}
+          disabled={isLoading}
+          onClick={deleteNotification}
         >
+          {isLoading && <PulseLoader size={5} color="white" />}
           Delete
         </button>
-      </div>
+      </li>
     </>
   );
 };

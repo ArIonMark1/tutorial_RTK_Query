@@ -34,10 +34,20 @@ code {
   border: none;
   font: inherit;
   cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 5px;
   outline: none;
   margin-right: auto;
   border-radius: 4px;
   padding: 8px 12px;
   background-color: #3f68b5d1;
   color: #fff;
+  &:hover {
+    background-color: #3f7eb5d1;
+    color: #f4ffcd;
+  }
+  &:disabled {
+    background-color: #556176a5;
+  }
 }

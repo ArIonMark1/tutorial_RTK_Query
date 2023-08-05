@@ -11,7 +11,7 @@ export const contactApi = createApi({
     getAllContacts: builder.query({
       query: () => '/contacts',
       providesTags: ['contacts'], // обовязково для всiх запитiв, кожний тип даних повинен мати свiй тег який iдентифiкує ресурс, по цьому тегу при будь-якій зміні колекції компонент буде перебудовуватись
-      // providesTags вказує з яким тегом йде колекція, по якому тегу буде писатись Rudux state(можемо в прописувати або масив або функцію)
+      // providesTags вказує з яким тегом йде колекція, по якому тегу буде писатись Redux state(можемо прописувати або масив або функцію)
     }),
     createContact: builder.mutation({
       query: data => ({
