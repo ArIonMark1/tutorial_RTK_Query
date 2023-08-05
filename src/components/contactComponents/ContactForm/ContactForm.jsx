@@ -1,5 +1,6 @@
 import { useCreateContactMutation } from 'redux/features/contactSlice/contactSlice';
 import { useState } from 'react';
+import { toast } from 'react-toastify';
 import './ContactForm.scss';
 
 const ContactForm = () => {
@@ -12,6 +13,7 @@ const ContactForm = () => {
     // console.log(evt.currentTarget.elements.name.value);
 
     createContact({ name, phone });
+    toast.success(`New contact "${name}" successfuly added.`);
     setName('');
     setPhone('');
   };

@@ -14,6 +14,9 @@ const AppBar = () => {
         <NavLink className="link" to="/pokemons">
           Pokemons
         </NavLink>
+        <NavLink className="link" to="/notifications">
+          Notifications
+        </NavLink>
       </div>
     </header>
   );

@@ -1,5 +1,6 @@
 import './ContactList.scss';
-const ContactList = ({ contacts, deleteContact }) => {
+const ContactList = ({ contacts, deleteAction }) => {
+  console.log(contacts);
   return (
     <div>
       <div className="contactsContainer">
@@ -21,7 +22,7 @@ const ContactList = ({ contacts, deleteContact }) => {
               <button
                 className="button"
                 type="button"
-                onClick={() => deleteContact(contact.id)}
+                onClick={() => deleteAction(contact.id)}
               >
                 Delete
               </button>
