@@ -25,7 +25,7 @@ const NotificationMarkup = ({ noteData }) => {
   return (
     <>
       <li className="noteList__row">
-        <div className="container-content">
+        <div className="note-content">
           <p>
             <span className="titleContent">Note: </span>
             <span className="content"> {noteData.note}</span>
