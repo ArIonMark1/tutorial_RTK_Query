@@ -3,18 +3,25 @@ import 'react-toastify/dist/ReactToastify.css';
 import ContactList from 'components/contactComponents/ContactList';
 import ContactForm from 'components/contactComponents/ContactForm';
 import { useGetAllContactsQuery } from 'redux/features/contactSlice/contactSlice';
+// import { useDeleteContactMutationQuery } from 'redux/features/contactSlice/contactSlice';
 import { useDeleteContactMutation } from 'redux/features/contactSlice/contactSlice';
 
 const ContactsPage = () => {
   // ****************************************************************
   const { data, isFetching, isSuccess, isError, error } =
     useGetAllContactsQuery({
+      skip: false,
+      pollingInterval: 2000,
+      refetchOnMountOrArgChange: 2000,
       refetchOnFocus: true,
       refetchOnReconnect: true,
     });
   // ****************************************************************
   const [deleteContact, { isLoading }] = useDeleteContactMutation();
   // ****************************************************************
+  console.log(error);
+  console.log('method:  ', deleteContact);
+
   return (
     <div className="container">
       <ToastContainer
@@ -38,7 +45,9 @@ const ContactsPage = () => {
       )}
       {isError && (
         <div>
-          <h3 className="headers">{error}</h3>
+          <h3 className="headers">
+            {error.status}. {error.error}
+          </h3>
         </div>
       )}
       {isLoading && (
@@ -46,9 +55,12 @@ const ContactsPage = () => {
           <h3 className="headers">Deleting....</h3>
         </>
       )}
+      <button type="button" onClick={deleteContact}>
+        Delete
+      </button>
 
       {isSuccess && (
-        <ContactList contacts={data} deleteContact={deleteContact} />
+        <ContactList contacts={data} deleteAction={deleteContact} />
       )}
 
       <div className="contactContainer"></div>

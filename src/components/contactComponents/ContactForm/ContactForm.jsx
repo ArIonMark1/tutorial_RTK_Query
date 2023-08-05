@@ -14,6 +14,7 @@ const ContactForm = () => {
     await createContact({ name, phone });
     toast.success(`${name} added to contacts.`);
 
+    createContact({ name, phone });
     setName('');
     setPhone('');
   };
