@@ -1,24 +1,24 @@
 {
   "files": {
     "main.css": "/tutorial_RTK_Query/static/css/main.633ea954.css",
-    "main.js": "/tutorial_RTK_Query/static/js/main.b99185bd.js",
+    "main.js": "/tutorial_RTK_Query/static/js/main.edc95593.js",
     "static/js/983.388b1ad0.chunk.js": "/tutorial_RTK_Query/static/js/983.388b1ad0.chunk.js",
     "static/css/551.a28d3ae9.chunk.css": "/tutorial_RTK_Query/static/css/551.a28d3ae9.chunk.css",
     "static/js/551.aba27de5.chunk.js": "/tutorial_RTK_Query/static/js/551.aba27de5.chunk.js",
     "static/css/121.de042004.chunk.css": "/tutorial_RTK_Query/static/css/121.de042004.chunk.css",
-    "static/js/121.e89ef5f8.chunk.js": "/tutorial_RTK_Query/static/js/121.e89ef5f8.chunk.js",
+    "static/js/121.b91b5716.chunk.js": "/tutorial_RTK_Query/static/js/121.b91b5716.chunk.js",
     "static/css/139.58471d6e.chunk.css": "/tutorial_RTK_Query/static/css/139.58471d6e.chunk.css",
     "static/js/139.4bafbcd1.chunk.js": "/tutorial_RTK_Query/static/js/139.4bafbcd1.chunk.js",
     "static/css/220.8554c9be.chunk.css": "/tutorial_RTK_Query/static/css/220.8554c9be.chunk.css",
     "static/js/220.9f5f0359.chunk.js": "/tutorial_RTK_Query/static/js/220.9f5f0359.chunk.js",
     "index.html": "/tutorial_RTK_Query/index.html",
     "main.633ea954.css.map": "/tutorial_RTK_Query/static/css/main.633ea954.css.map",
-    "main.b99185bd.js.map": "/tutorial_RTK_Query/static/js/main.b99185bd.js.map",
+    "main.edc95593.js.map": "/tutorial_RTK_Query/static/js/main.edc95593.js.map",
     "983.388b1ad0.chunk.js.map": "/tutorial_RTK_Query/static/js/983.388b1ad0.chunk.js.map",
     "551.a28d3ae9.chunk.css.map": "/tutorial_RTK_Query/static/css/551.a28d3ae9.chunk.css.map",
     "551.aba27de5.chunk.js.map": "/tutorial_RTK_Query/static/js/551.aba27de5.chunk.js.map",
     "121.de042004.chunk.css.map": "/tutorial_RTK_Query/static/css/121.de042004.chunk.css.map",
-    "121.e89ef5f8.chunk.js.map": "/tutorial_RTK_Query/static/js/121.e89ef5f8.chunk.js.map",
+    "121.b91b5716.chunk.js.map": "/tutorial_RTK_Query/static/js/121.b91b5716.chunk.js.map",
     "139.58471d6e.chunk.css.map": "/tutorial_RTK_Query/static/css/139.58471d6e.chunk.css.map",
     "139.4bafbcd1.chunk.js.map": "/tutorial_RTK_Query/static/js/139.4bafbcd1.chunk.js.map",
     "220.8554c9be.chunk.css.map": "/tutorial_RTK_Query/static/css/220.8554c9be.chunk.css.map",
@@ -26,6 +26,6 @@
   },
   "entrypoints": [
     "static/css/main.633ea954.css",
-    "static/js/main.b99185bd.js"
+    "static/js/main.edc95593.js"
   ]
 }
