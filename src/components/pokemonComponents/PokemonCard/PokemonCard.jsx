@@ -1,18 +1,12 @@
 import './PokemonCard.scss';
 
 const PokemonCard = ({ pokemonData }) => {
-  console.log(pokemonData);
-
   const allTypes = pokemonData.types;
   const typeNames = allTypes.map(objType => objType.type.name).join(', ');
 
   const allStats = pokemonData.stats;
-  const statNames = allStats.map(objStat => objStat.stat.name);
-  const statIndexes = allStats.map(objStat => objStat.base_stat);
-
-  console.log(statNames, ': ', statIndexes);
-  console.log('Type names: ', typeNames);
-  console.log(allStats);
+  // const statNames = allStats.map(objStat => objStat.stat.name);
+  // const statIndexes = allStats.map(objStat => objStat.base_stat);
 
   return (
     <>

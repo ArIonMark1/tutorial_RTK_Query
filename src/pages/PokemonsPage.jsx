@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { useGetZalypaQuery } from 'redux/features/apiSlice/apiSlice';
+import { useGetPokemonQuery } from 'redux/features/apiSlice/apiSlice';
 import RequestPokemonForm from 'components/pokemonComponents/RequestPokemonForm';
 import PokemonCard from 'components/pokemonComponents/PokemonCard';
 
@@ -7,7 +7,7 @@ const PokemonPage = () => {
   const [pokemonName, setPokemonName] = useState('');
   // ****************************************************************
   const { data, currentData, isError, error, isFetching, isSuccess } =
-    useGetZalypaQuery(pokemonName, {
+    useGetPokemonQuery(pokemonName, {
       skip: pokemonName === '',
       refetchOnFocus: true,
       refetchOnReconnect: true,
